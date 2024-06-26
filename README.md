@@ -1,4 +1,3 @@
-<img width="1440" alt="annotate_bounding_boxes" src="https://github.com/osipgas/ParkingTracker/assets/115102730/1da1b5aa-a3c9-4d57-99b3-cbf0fa7317cd">Here's a proposed README file for your ParkingTracker project on GitHub:
 
 ---
 
