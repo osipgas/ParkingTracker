@@ -36,4 +36,11 @@ To download and open LabelImg run this commands in terminal:
     python labelImg.py
 
 
-4. Once bounding boxes are created, proceed to the parking_tracker_usage_example.py file and follow the provided instructions.
+4. Once bounding boxes are created, proceed to the parking_tracker_usage_example.py file and follow the provided instructions. With ParkingTracker you can get predicts, quantity of free and occupied parking lots, image with visualated predicts.
+
+
+
+The following image shows the result of ParkingTracker analyze:![output](https://github.com/osipgas/ParkingTracker/assets/115102730/2023d93f-544b-4762-99d5-f907f78bd798)
+![output](https://github.com/osipgas/ParkingTracker/assets/115102730/2023d93f-544b-4762-99d5-f907f78bd798)
+
+
