@@ -27,13 +27,13 @@ ParkingTracker is a project designed for detecting parking space occupancy using
 2. Place each parking spot within its respective bounding box. This step ensures the neural network knows where to locate vehicles.<img width="1440" alt="annotate_bounding_boxes" src="https://github.com/osipgas/ParkingTracker/assets/115102730/be004f64-2301-4cd7-b462-a9d28817f64b">
 To download and open LabelImg run this commands in terminal:
 
-git clone https://github.com/tzutalin/labelImg
+    git clone https://github.com/tzutalin/labelImg
 
-cd labelImg
+    cd labelImg
 
-make qt5py3
+    make qt5py3
 
-python labelImg.py
+    python labelImg.py
 
 
 4. Once bounding boxes are created, proceed to the parking_tracker_usage_example.py file and follow the provided instructions.
