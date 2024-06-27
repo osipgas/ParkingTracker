@@ -29,15 +29,6 @@ Welcome to ParkingTracker, computer vision project designed to detect parking oc
 - **Data**: Contains various parking datasets used for training and testing. To achieve good accuracy on various data, I had to use multiple datasets.
 - **CROPPED**: Every dataset from "Data" folder includes "CROPPED" folder that stores cropped images categorized by occupancy status (busy or free). I'am creating this folders in "crop.ipynb" and "crop_by_coco.ipynb" files.
 
-### Datasets
-1. https://public.roboflow.com/object-detection/pklot
-2. https://universe.roboflow.com/parking-lot-testing/parking-lot-npjkj/dataset/5
-3. https://universe.roboflow.com/kareem-ayman-zgw2u/parkingslot/dataset/2
-4. http://cnrpark.it
-5. -
-6. https://universe.roboflow.com/jataide/parking-availability
-7. https://universe.roboflow.com/sut-0lhxj/car-park-r9uzn/dataset/4
-
 ## Usage
 
 1. To use the Parking Tracker, you first need to create bounding boxes, which is a quick and straightforward process. This procedure needs to be done once initially, and then the model can autonomously operate as long as the camera remains static (bounding boxes must accurately match the actual parking spot locations for proper functioning). to create bounding boxes: Follow inctructions from bounding_boxes_creation.py file from Usage Example folder with LabelImg to define bounding boxes for each parking spot.
