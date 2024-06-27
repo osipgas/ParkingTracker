@@ -6,7 +6,7 @@ ParkingTracker is a project designed for detecting parking space occupancy using
 
 ### Files
 
-1. **crop_by_coco.ipynb**: This serve for crop and save images based on COCO annotations. It processes multiple datasets and saves cropped images categorized by occupancy.
+1. **crop_by_coco.ipynb**: Serves for crop and save images based on COCO annotations. It processes multiple datasets and saves cropped images categorized by occupancy.
 
 2. **crop.ipynb**: Implements image cropping based on bounding boxes from various datasets.
 
