@@ -45,7 +45,10 @@ The following image shows the result of ParkingTracker analysis:![output](https:
 
 
 
-The following video shows the result of ParkingTracker analysis:
-https://github.com/osipgas/ParkingTracker/assets/115102730/8968d6e3-5fd0-4eba-be15-57de49ff060b
+And here's the video example:
+
+https://github.com/osipgas/ParkingTracker/assets/115102730/3197c549-7ba6-498e-8969-4114b4f3866b
+
+
 
 
