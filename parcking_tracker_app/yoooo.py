@@ -1,6 +1,6 @@
 from PIL import Image
-from PKLotDetector import PKLotDetector
-from ParkingTracker import ParkingTracker
+from ParkingTracker.PKLotDetector import PKLotDetector
+from ParkingTracker.ParkingTracker import ParkingTracker
 import pickle
 import torch
 import cv2
@@ -27,10 +27,10 @@ def to_numpy(torch_image):
 
 # -----------------
 # Захар, это хуйня, по итогу тут получаешь parking_tracker
-bounding_boxes_path = 'Usage Example/bounding_boxes.pkl'
+bounding_boxes_path = '../Usage Example/bounding_boxes.pkl'
 with open(bounding_boxes_path, 'rb') as f:
     bounding_boxes = pickle.load(f)
-weights_path = "pklot_detector.pth"
+weights_path = "../pklot_detector.pth"
 pklot_detector = PKLotDetector()
 pklot_detector.load_state_dict(torch.load(weights_path, map_location='cpu'))
 transforms = tt.Resize((100, 100))
@@ -39,7 +39,7 @@ parking_tracker = ParkingTracker(pklot_detector, bounding_boxes, transforms)
 
 
 # путь к изображение
-image_path = r"C:\Users\Azaki\Desktop\studie\ParkingTracker\Usage Example\image_to_annotate.jpg"
+image_path = r"/ParkingTracker/Usage Example/image_to_annotate.jpg"
 
 # открывем изображение по пути
 image = cv2.imread(image_path)
