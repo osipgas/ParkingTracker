@@ -18,7 +18,7 @@ ParkingTracker is a project designed for detecting parking space occupancy using
 
 ### Directories
 
-- **Data**: Contains various parking datasets used for training and testing.
+- **Data**: Contains various parking datasets used for training and testing. To achieve good accuracy on various data, I had to use multiple datasets.
 - **CROPPED**: Every dataset from "Data" folder includes "CROPPED" folder that stores cropped images categorized by occupancy status (busy or free). I'am creating this folders in "crop.ipynb" and "crop_by_coco.ipynb" files.
 
 ## Usage
