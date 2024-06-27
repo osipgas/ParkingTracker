@@ -1,6 +1,6 @@
 # ParkingTracker
 
-ParkingTracker is a project designed for detecting parking space occupancy using computer vision techniques. It includes tools for annotation, cropping, dataset management, and a deep learning model for occupancy prediction.
+ParkingTracker is a project designed for detecting parking space occupancy using computer vision techniques.
 
 ## Project Structure
 
