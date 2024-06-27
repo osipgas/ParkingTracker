@@ -28,6 +28,7 @@ Welcome to ParkingTracker, computer vision project designed to detect parking oc
 
 - **Data**: Contains various parking datasets used for training and testing. To achieve good accuracy on various data, I had to use multiple datasets.
 - **CROPPED**: Every dataset from "Data" folder includes "CROPPED" folder that stores cropped images categorized by occupancy status (busy or free). I'am creating this folders in "crop.ipynb" and "crop_by_coco.ipynb" files.
+- **Parking Tracker App**: Сontains files and resources for developing and running an application using Parking Tracker. The application is being created by contributor of this project Zakhar. The application is still under development and not ready for use.
 
 ## Usage
 
