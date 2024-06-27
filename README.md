@@ -5,7 +5,7 @@ Welcome to ParkingTracker, computer vision project designed to detect parking oc
 
 ## Key Features
 
-- **High Accuracy**: Achieved an impressive 99% accuracy on a diverse range of datasets, ensuring reliable performance across various environments.
+- **High Accuracy**: Achieved an impressive 98.5% accuracy on a diverse range of datasets, ensuring reliable performance across various environments.
 - **Real-time Detection**: Processes images and video streams in real-time, providing instant feedback on parking spaces availability.
 - **Scalability**: Since the PKLotDetector operates swiftly, it is well-suited for managing all parkings, including large ones.
 
