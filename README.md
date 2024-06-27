@@ -48,7 +48,7 @@ To download and open LabelImg run this commands in terminal:
 
 
 
-The following image shows the result of ParkingTracker analysis:![output](https://github.com/osipgas/ParkingTracker/assets/115102730/bf21654b-4e8e-4dec-943a-39718226e273)
+The following image shows the result of ParkingTracker work:![output](https://github.com/osipgas/ParkingTracker/assets/115102730/bf21654b-4e8e-4dec-943a-39718226e273)
 
 
 
