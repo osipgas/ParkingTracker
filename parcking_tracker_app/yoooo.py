@@ -9,6 +9,7 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
+from kivy.uix.image import Image as Im
 
 # функции для перевода иозбражения в разные типы данных
 def to_torch(numpy_image):
@@ -27,10 +28,10 @@ def to_numpy(torch_image):
 
 # -----------------
 # Захар, это хуйня, по итогу тут получаешь parking_tracker
-bounding_boxes_path = '../Usage Example/bounding_boxes.pkl'
+bounding_boxes_path = r'C:\Users\Azaki\Desktop\studie\ParkingTracker\Usage Example\bounding_boxes.pkl'
 with open(bounding_boxes_path, 'rb') as f:
     bounding_boxes = pickle.load(f)
-weights_path = "../pklot_detector.pth"
+weights_path = r"C:\Users\Azaki\Desktop\studie\ParkingTracker\pklot_detector.pth"
 pklot_detector = PKLotDetector()
 pklot_detector.load_state_dict(torch.load(weights_path, map_location='cpu'))
 transforms = tt.Resize((100, 100))
@@ -39,7 +40,7 @@ parking_tracker = ParkingTracker(pklot_detector, bounding_boxes, transforms)
 
 
 # путь к изображение
-image_path = r"/ParkingTracker/Usage Example/image_to_annotate.jpg"
+image_path = r"C:\Users\Azaki\Desktop\studie\ParkingTracker\Usage Example\image_to_annotate.jpg"
 
 # открывем изображение по пути
 image = cv2.imread(image_path)
@@ -77,17 +78,22 @@ availability = parking_tracker.get_parking_availability(predicts)
 
 class MyInterfaceApp(App):
     def build(self):
-        main_place = TabbedPanel(do_default_tab=False)
-        first_window = TabbedPanelItem(text='Count_of_free_parking_places')
+        main_place = TabbedPanel(do_default_tab=False, tab_pos='top_mid', background_color=(60/255, 179/255, 113/255))
+        first_window = TabbedPanelItem(text='Parcking', background_color=(60/255, 179/255, 113/255))
+        second_window = TabbedPanelItem(text='Video', background_color=(60/255, 179/255, 113/255))
         first_window_box = BoxLayout()
+        second_window_box = BoxLayout()
 
-
-        main_lable = Label(text=availability)
+        main_lable = Label(text=availability, font_size='40sp')
         first_window_box.add_widget(main_lable)
         first_window.add_widget(first_window_box)
 
-        main_place.add_widget(first_window)
+        image_for_video = Im(source=r'C:\Users\Azaki\Desktop\studie\ParkingTracker\Usage Example\image_to_annotate.jpg')
+        second_window_box.add_widget(image_for_video)
+        second_window.add_widget(second_window_box)
 
+        main_place.add_widget(first_window)
+        main_place.add_widget(second_window)
         return main_place
 
 
