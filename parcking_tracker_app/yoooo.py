@@ -10,6 +10,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
 from kivy.uix.image import Image as Im
+from kivy.graphics.texture import Texture
 
 # функции для перевода иозбражения в разные типы данных
 def to_torch(numpy_image):
@@ -88,7 +89,14 @@ class MyInterfaceApp(App):
         first_window_box.add_widget(main_lable)
         first_window.add_widget(first_window_box)
 
-        image_for_video = Im(source=r'C:\Users\Azaki\Desktop\studie\ParkingTracker\Usage Example\image_to_annotate.jpg')
+        pil_image = output_image.convert('RGB')
+        data = pil_image.tobytes()
+        texture = Texture.create(size=(pil_image.width, pil_image.height))
+        texture.blit_buffer(data, colorfmt='rgb', bufferfmt='ubyte')
+        texture.flip_vertical()
+
+        image_for_video = Im()
+        image_for_video.texture = texture
         second_window_box.add_widget(image_for_video)
         second_window.add_widget(second_window_box)
 
