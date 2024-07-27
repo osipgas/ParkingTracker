@@ -11,6 +11,7 @@ from kivy.uix.label import Label
 from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
 from kivy.uix.image import Image as Im
 from kivy.graphics.texture import Texture
+from kivy.clock import Clock
 
 # функции для перевода иозбражения в разные типы данных
 def to_torch(numpy_image):
@@ -89,20 +90,24 @@ class MyInterfaceApp(App):
         first_window_box.add_widget(main_lable)
         first_window.add_widget(first_window_box)
 
-        pil_image = output_image.convert('RGB')
-        data = pil_image.tobytes()
-        texture = Texture.create(size=(pil_image.width, pil_image.height))
-        texture.blit_buffer(data, colorfmt='rgb', bufferfmt='ubyte')
-        texture.flip_vertical()
-
-        image_for_video = Im()
-        image_for_video.texture = texture
-        second_window_box.add_widget(image_for_video)
+        self.img = Im()
+        second_window_box.add_widget(self.img)
         second_window.add_widget(second_window_box)
 
         main_place.add_widget(first_window)
         main_place.add_widget(second_window)
+        self.img_path = image_path
+        Clock.schedule_interval(self.update, 1.0 / 30.0)
         return main_place
+
+    def update(self, dt):
+        frame = cv2.imread(self.img_path)
+        if frame is not None    :
+            # Convert the frame to texture
+            buf = cv2.flip(frame, 0).tobytes()
+            texture = Texture.create(size=(frame.shape[1], frame.shape[0]), colorfmt='bgr')
+            texture.blit_buffer(buf, colorfmt='bgr', bufferfmt='ubyte')
+            self.img.texture = texture
 
 
 if __name__ == "__main__":
