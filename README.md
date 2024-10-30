@@ -1,6 +1,6 @@
 # ParkingTracker
 
-Welcome to ParkingTracker, computer vision project designed to detect parking occupancy using computer vision techniques.
+Welcome to ParkingTracker, project designed to detect parking occupancy using computer vision techniques.
 
 
 ## Key Features
